@@ -1,5 +1,8 @@
 from __future__ import absolute_import
-from django.conf.urls import re_path, include
+try:
+    from django.conf.urls import re_path, include
+except ImportError:
+    from django.urls import re_path, include
 from . import views
 
 app_urlpatterns = [
